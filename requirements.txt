@@ -1,0 +1,6 @@
+Flask==2.0.2
+Werkzeug==2.0.2
+flask-cors==3.0.10
+requests==2.26.0
+beautifulsoup4==4.9.3
+pymongo[srv]==3.12.0

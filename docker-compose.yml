@@ -1,0 +1,21 @@
+version: '3'
+services:
+  splash:
+    image: scrapinghub/splash
+    ports:
+      - 8050:8050
+    networks:
+      - scraping-network
+
+  flask:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - scraping-network
+    depends_on:
+      - splash
+
+networks:
+  scraping-network:
+    driver: bridge
